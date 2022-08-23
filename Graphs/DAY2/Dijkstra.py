@@ -11,7 +11,7 @@ def dijkstra(V, adj, S):
         vis[k]=False
         d[k]=maxd
     d[S]=0
-    print(d)
+    # print(d)
     for u in range(V):
         lis1=[]
         for i in range(V):
@@ -25,6 +25,7 @@ def dijkstra(V, adj, S):
         if nvlis==[]:
             break
         nv=min(nvlis)
+        # nv=nvlis[0]
         vis[nv]=True
         for [m,di] in adj[nv]:
             if not vis[m]:
@@ -32,8 +33,8 @@ def dijkstra(V, adj, S):
         # print(d)
     return(d)
 
-V=3
-# adj=[[[3,9],[5,4]],[[4,4]],[[5,10]],[],[[5,3]],[]]
-adj=[[[1,1],[2,6]],[[2,3],[0,1]],[[1,3],[0,6]]]
+V=6
+adj=[[[3,9],[5,4]],[[4,4]],[[5,10]],[],[[5,3]],[]]
+# adj=[[[1,1],[2,6]],[[2,3],[0,1]],[[1,3],[0,6]]]
 S=2
 print(dijkstra(V,adj,S))
