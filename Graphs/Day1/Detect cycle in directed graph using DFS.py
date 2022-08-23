@@ -1,6 +1,5 @@
     
 def cycledfs(i,vis,adj,V,parent):
-    
     # print(i,parent)
     for m in adj[i]:
         if not vis[m]:
@@ -33,10 +32,8 @@ V=5
 # adj=[[],[2],[1,4],[5],[2],[3,10,6],[5,7],[6,8],[7,9,11],[10,8],[5,9],[8]]  #Undirected Case True
 # adj=[[],[2],[1,3],[2]]          #Undirected Case True
 # adj=[[],[4,3],[4,3],[1,2],[1,2]]      #Undirected Case True
-# adj=[[],[2],[3],[4],[5],[2]]   #Directed Case
+# adj=[[],[2],[3],[4],[5],[2]]   #Directed Case True
 # adj=[[1],[0]]  #Directed False
 # adj=[[1],[2],[]] #Directed False
 adj=[[],[3],[3],[],[1,2]] #Directed True
-
-
 print(detect_cylce(V,adj))
